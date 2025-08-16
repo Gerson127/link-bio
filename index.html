@@ -1,117 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dra. Sweine Coelho — Link na Bio</title>
-  <meta name="description" content="Agendamento de consultas • Workshops/Palestras/Formação • Compra do livro (15.990 Kz)">
-  <style>
-    /* ====== PALETA TEMA DOURADO + CAFÉ ====== */
-    :root{
-      --bg: #F2E8DA;          /* areia/claro do fundo */
-      --bg-2: #E8D8C2;        /* degradê suave */
-      --fg: #2C231B;          /* castanho escuro (texto) */
-      --muted: #7A6A57;       /* castanho médio (texto secundário) */
-      --card: #FFF8EE;        /* cartão creme */
-      --card-2:#FFF3E1;       /* leve variação */
-      --brand-1:#D7A64A;      /* dourado */
-      --brand-2:#B0722A;      /* âmbar/caramelo */
-      --chip:#3C2E23;         /* café para “tags” */
-      --radius:16px;
-      --shadow:0 14px 30px rgba(44,35,27,.18);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      color:var(--fg);
-      background:
-        radial-gradient(900px 520px at 10% -10%, var(--bg-2), transparent 55%),
-        radial-gradient(700px 420px at 100% 0%, rgba(215,166,74,.18), transparent 55%),
-        var(--bg);
-      line-height:1.55;
-    }
-    .wrap{max-width:960px;margin:0 auto;padding:24px}
-    header{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:50%;overflow:hidden;border:3px solid rgba(60,46,35,.15);box-shadow:var(--shadow)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    h1{margin:0 0 6px;font-size:1.95rem}
-    .sub{margin:0;color:var(--muted)}
-    .grid{display:grid;gap:18px;grid-template-columns:1fr;margin-top:22px}
-    @media(min-width:768px){.grid{grid-template-columns:1fr 1fr 1fr}}
-    .card{
-      background:linear-gradient(180deg,var(--card),var(--card-2));
-      border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
-      border:1px solid rgba(60,46,35,.08);
-      display:flex;flex-direction:column;min-height:340px;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-    .card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(44,35,27,.2)}
-    .thumb{aspect-ratio:16/10;background:#EADCC8;overflow:hidden;position:relative}
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .tag{
-      position:absolute;top:12px;left:12px;background:rgba(60,46,35,.7);color:#fff;
-      padding:6px 10px;border-radius:999px;font-size:.78rem;border:1px solid rgba(255,255,255,.18)
-    }
-    .content{padding:16px;display:grid;gap:10px;flex:1}
-    .title{margin:0;font-weight:750;font-size:1.12rem}
-    .desc{margin:0;color:var(--muted)}
-    .price{font-weight:800;color:var(--fg)}
-    .cta{margin-top:auto}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:12px 14px;border-radius:12px;text-decoration:none;color:#2C231B;
-      background:linear-gradient(180deg,var(--brand-1),var(--brand-2));font-weight:800;border:none
-    }
-    .btn:focus-visible{outline:2px solid #D7A64A;outline-offset:2px}
-    footer{margin:26px 0 10px;color:var(--muted);text-align:center;font-size:.92rem}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dra. Sweine Coelho — Link na Bio</title>
+<meta name="description" content="Agendamento de consultas • Workshops/Palestras/Formação • Compra do livro (15.990 Kz)">
+<style>
+  /* ===== TEMA DOURADO + CAFÉ ===== */
+  :root{
+    --bg:#F2E8DA; --bg2:#E8D8C2;
+    --fg:#2C231B; --muted:#7A6A57;
+    --brand1:#D7A64A; --brand2:#B0722A;
+    --chip:#3C2E23; --r:16px;
+    --shadow:0 14px 30px rgba(44,35,27,.18);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; color:var(--fg);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+    background:
+      radial-gradient(900px 520px at 10% -10%, var(--bg2), transparent 55%),
+      radial-gradient(700px 420px at 100% 0%, rgba(215,166,74,.18), transparent 55%),
+      var(--bg);
+    line-height:1.55;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:24px}
+  header{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center}
+  .avatar{width:96px;height:96px;border-radius:50%;overflow:hidden;border:3px solid rgba(60,46,35,.15);box-shadow:var(--shadow)}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  h1{margin:0 0 6px;font-size:1.95rem}
+  .sub{margin:0;color:var(--muted)}
+  /* Home: 3 botões */
+  .grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:22px}
+  @media(min-width:768px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .card{
+    background:linear-gradient(180deg,#FFF8EE,#FFF3E1);
+    border-radius:var(--r); padding:18px; text-align:center;
+    box-shadow:var(--shadow); border:1px solid rgba(60,46,35,.08);
+  }
+  .title{margin:0 0 8px;font-weight:800}
+  .desc{margin:0;color:var(--muted);font-size:.95rem}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 14px;margin-top:12px;border-radius:12px;text-decoration:none;color:#2C231B;
+    background:linear-gradient(180deg,var(--brand1),var(--brand2));font-weight:800;border:none
+  }
+  footer{margin:26px 0 10px;color:var(--muted);text-align:center;font-size:.92rem}
+
+  /* ===== Overlays (páginas internas sem JS) ===== */
+  .overlay{
+    position:fixed; inset:0; display:none;
+    background:#000; z-index:50; color:#fff;
+  }
+  .overlay:target{ display:block; }
+  .ov-bg{
+    position:absolute; inset:0;
+    background-size:cover; background-position:center center;
+    filter:brightness(.55);
+  }
+  .ov-content{
+    position:relative; z-index:1; height:100%;
+    display:grid; place-items:center; padding:22px;
+  }
+  .panel{
+    width:min(720px, 92vw);
+    background:rgba(255,248,238,.1); backdrop-filter: blur(6px);
+    border:1px solid rgba(255,255,255,.18); border-radius:18px; padding:22px;
+  }
+  .panel h2{margin:0 0 8px;font-size:1.6rem}
+  .panel p{margin:.25rem 0 1rem}
+  .chip{display:inline-block;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);
+        padding:6px 10px;border-radius:999px;margin-bottom:10px}
+  .ov-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;text-decoration:none;
+    background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.28); font-weight:700
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.2)}
+  .btn-wa{ background:linear-gradient(180deg,var(--brand1),var(--brand2)); color:#2C231B; border:none }
+  .close-x{
+    position:absolute; top:14px; right:14px; width:38px; height:38px; border-radius:999px;
+    background:rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.25);
+    display:grid; place-items:center; text-decoration:none; color:#fff; font-weight:900;
+  }
+</style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="avatar"><img src="/link-bio/consultas.jpg?v=2" alt="Avatar Dra. Sweine"></div>
+      <div class="avatar"><img src="/link-bio/consultas.jpg" alt="Avatar Dra. Sweine"></div>
       <div>
         <h1>Dra. Sweine Coelho <span style="font-size:.9rem;font-weight:600;color:var(--muted)">• Link na Bio</span></h1>
-        <p class="sub">Escolha abaixo: <strong>comprar o livro</strong> (15.990 Kz), <strong>agendar consulta</strong> ou <strong>reservar workshop/palestra/formação</strong>.</p>
+        <p class="sub">Escolha uma opção abaixo. O detalhe abre em tela cheia com a foto e o botão de WhatsApp.</p>
       </div>
     </header>
 
-    <main>
-      <section class="grid" aria-label="Opções">
-        <!-- Livro -->
-        <article class="card">
-          <div class="thumb"><img src="/link-bio/livro.jpg?v=2" alt="Compra do Livro"><span class="tag">Livro</span></div>
-          <div class="content">
-            <h2 class="title">Compra do livro</h2>
-            <p class="desc"><em>Os Segredos de uma Gestão Humanizada em Saúde</em>. <span class="price">15.990 Kz</span>.</p>
-            <div class="cta"><a class="btn" href="https://wa.me/244935693420?text=Ol%C3%A1%2C%20quero%20comprar%20o%20livro%20%28pre%C3%A7o%3A%2015.990%20Kz%29." target="_blank" rel="noopener">Comprar pelo WhatsApp</a></div>
-          </div>
-        </article>
+    <!-- HOME: 3 OPÇÕES -->
+    <main class="grid" aria-label="Opções">
+      <article class="card">
+        <h2 class="title">Compra do livro</h2>
+        <p class="desc">“Os Segredos de uma Gestão Humanizada em Saúde” — <strong>15.990 Kz</strong>.</p>
+        <a class="btn" href="#livro">Ver detalhes</a>
+      </article>
 
-        <!-- Consultas -->
-        <article class="card">
-          <div class="thumb"><img src="/link-bio/consultas.jpg?v=2" alt="Consultas"><span class="tag">Consultas</span></div>
-          <div class="content">
-            <h2 class="title">Agendamento de consultas</h2>
-            <p class="desc">Marca a tua consulta (presencial ou online). Atendimento rápido via WhatsApp.</p>
-            <div class="cta"><a class="btn" href="https://wa.me/244932403904?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a></div>
-          </div>
-        </article>
+      <article class="card">
+        <h2 class="title">Agendamento de consultas</h2>
+        <p class="desc">Marca a tua consulta (presencial ou online).</p>
+        <a class="btn" href="#consultas">Ver detalhes</a>
+      </article>
 
-        <!-- Workshops -->
-        <article class="card">
-          <div class="thumb"><img src="/link-bio/workshops.jpg?v=2" alt="Workshops e Palestras"><span class="tag">Eventos</span></div>
-          <div class="content">
-            <h2 class="title">Workshops, palestras ou formação</h2>
-            <p class="desc">Reservas para empresas, escolas e eventos. Conteúdos à medida.</p>
-            <div class="cta"><a class="btn" href="https://wa.me/244935693420?text=Ol%C3%A1%2C%20quero%20agendar%20um%20workshop%2C%20palestra%20ou%20forma%C3%A7%C3%A3o." target="_blank" rel="noopener">Reservar data</a></div>
-          </div>
-        </article>
-      </section>
+      <article class="card">
+        <h2 class="title">Workshops / Palestras / Formação</h2>
+        <p class="desc">Para empresas, escolas e eventos.</p>
+        <a class="btn" href="#workshops">Ver detalhes</a>
+      </article>
     </main>
 
     <footer>© Dra. Sweine Coelho · WhatsApp livro/workshops: +244 935 693 420 · Consultas: +244 932 403 904</footer>
   </div>
+
+  <!-- ===== OVERLAYS ===== -->
+  <!-- LIVRO -->
+  <section id="livro" class="overlay" aria-modal="true">
+    <div class="ov-bg" style="background-image:url('/link-bio/livro.jpg');"></div>
+    <a class="close-x" href="#">×</a>
+    <div class="ov-content">
+      <div class="panel">
+        <span class="chip">Livro</span>
+        <h2>Compra do livro</h2>
+        <p><em>Os Segredos de uma Gestão Humanizada em Saúde</em>.</p>
+        <p><strong>Preço: 15.990 Kz</strong></p>
+        <div class="ov-actions">
+          <a class="btn-ghost" href="#">← Voltar</a>
+          <a class="btn-ghost btn-wa" target="_blank" rel="noopener"
+             href="https://wa.me/244935693420?text=Ol%C3%A1%2C%20quero%20comprar%20o%20livro%20%28pre%C3%A7o%3A%2015.990%20Kz%29.">Comprar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTAS -->
+  <section id="consultas" class="overlay" aria-modal="true">
+    <div class="ov-bg" style="background-image:url('/link-bio/consultas.jpg');"></div>
+    <a class="close-x" href="#">×</a>
+    <div class="ov-content">
+      <div class="panel">
+        <span class="chip">Consultas</span>
+        <h2>Agendamento de consultas</h2>
+        <p>Atendimento humanizado — presencial ou online.</p>
+        <div class="ov-actions">
+          <a class="btn-ghost" href="#">← Voltar</a>
+          <a class="btn-ghost btn-wa" target="_blank" rel="noopener"
+             href="https://wa.me/244932403904?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20consulta.">Agendar via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section id="workshops" class="overlay" aria-modal="true">
+    <div class="ov-bg" style="background-image:url('/link-bio/workshops.jpg');"></div>
+    <a class="close-x" href="#">×</a>
+    <div class="ov-content">
+      <div class="panel">
+        <span class="chip">Eventos</span>
+        <h2>Workshops, palestras e formação</h2>
+        <p>Reservas para empresas, escolas e eventos. Conteúdos à medida.</p>
+        <div class="ov-actions">
+          <a class="btn-ghost" href="#">← Voltar</a>
+          <a class="btn-ghost btn-wa" target="_blank" rel="noopener"
+             href="https://wa.me/244935693420?text=Ol%C3%A1%2C%20quero%20agendar%20um%20workshop%2C%20palestra%20ou%20forma%C3%A7%C3%A3o.">Reservar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
